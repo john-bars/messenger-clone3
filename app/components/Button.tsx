@@ -1,10 +1,10 @@
 "use client";
 
-import clsx from "clsx";
+import clsx from "clsx"; // to make styling more dynamic and use conditionals for css style
 
 interface ButtonProps {
   type?: "button" | "submit" | "reset" | undefined;
-  fullWidth?: boolean;
+  fullWidth?: boolean; //for css styling
   children?: React.ReactNode;
   onClick?: () => void;
   secondary?: boolean;
