@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { BsGithub, BsGoogle } from "react-icons/bs";
 
 import Input from "./inputs/Input";
 import Button from "./Button";
@@ -39,6 +40,12 @@ const AuthForm = () => {
     if (variant === "LOGIN") {
       //NextAuth SignIn
     }
+  };
+
+  const socialAction = (action: string) => {
+    setIsLoading(true);
+
+    //NextAuth Social Signin
   };
 
   return (
@@ -91,12 +98,12 @@ const AuthForm = () => {
 
           <div className="mt-6 flex gap-2">
             <AuthSocialButton
-            // icon={BsGithub}
-            // onClick={() => socialAction("github")}
+              icon={BsGithub}
+              onClick={() => socialAction("github")}
             />
             <AuthSocialButton
-            // icon={BsGoogle}
-            // onClick={() => socialAction("google")}
+              icon={BsGoogle}
+              onClick={() => socialAction("google")}
             />
           </div>
         </div>
