@@ -12,7 +12,7 @@ export const authOptions: AuthOptions = {
   adapter: PrismaAdapter(prisma),
   debug: process.env.NODE_ENV === "development",
   session: { strategy: "jwt" },
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXTAUTH_SECRET, //needed specially by middleware
 
   providers: [
     GithubProvider({
